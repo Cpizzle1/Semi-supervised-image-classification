@@ -1,6 +1,34 @@
 # Image classification (Task #3)
+<div>In most real-world applications, labelled data is scarce. Suppose you are given
+the Fashion-MNIST dataset (https://github.com/zalandoresearch/fashion-mnist), but without any labels
+in the training set. The labels are held in a database, which you may query to
+reveal the label of any particular image it contains. Your task is to build a classifier to
+>90% accuracy on the test set, using the smallest number of queries to this
+>database. 
 
-### Sammple of fashion dataset
+You may use any combination of techniques you find suitable
+(supervised, self-supervised, unsupervised). However, using other datasets or
+pre-trained models is not allowed.
+</div>
+
+Labels
+
+Each training and test example is assigned to one of the following labels:
+
+* 0 T-shirt/top
+* 1 Trouser
+* 2 Pullover
+* 3 Dress
+* 4 Coat
+* 5 Sandal
+* 6 Shirt
+* 7 Sneaker
+* 8 Bag
+* 9 Ankle boot
+
+### Sample of fashion dataset
+
+
 ![EDA dataframe](images/eda_image.png)
 
 
@@ -21,6 +49,11 @@
     <div>
     * clustering accuracy seems to max out at 144-256 clusters.  Increasing number of clusters does not dramatically increase accuracy
      </div>
+
+### Confusion Matrix
+
+![confusion Matrix](images/confusion_matrix.png)
+<div> * catagories 2, 6, & 4 (pullover, shirt, and coat have the most crossover mismatches.  Seems to make sense from the eye test) </div>
 
 ### samples of the centroids of image types
 ![centroids](images/centroids.png)
